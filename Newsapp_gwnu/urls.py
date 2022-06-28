@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from News.views import ItemListAPI
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/News/', ItemListAPI.as_view())
 ]
